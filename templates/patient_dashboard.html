@@ -1,0 +1,23 @@
+<!-- patient_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Patient Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome, {{ user[1] }} {{ user[2] }}</h1>
+        <!-- Correctly reference the profile picture -->
+        <img src="{{ url_for('static', filename=user[3]) }}" alt="Profile Picture" class="profile-pic">
+        <ul>
+            <li><strong>Username:</strong> {{ user[4] }}</li>
+            <li><strong>Email:</strong> {{ user[5] }}</li>
+            <li><strong>Address:</strong> {{ user[7] }}, {{ user[8] }}, {{ user[9] }}, {{ user[10] }}</li>
+            <li><strong>User Type:</strong> {{ user[11] }}</li>
+        </ul>
+    </div>
+</body>
+</html>
